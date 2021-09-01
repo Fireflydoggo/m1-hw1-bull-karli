@@ -1,5 +1,5 @@
 
-@charset "UTF-8";
+@charset "utf-8";
 
 * {
 	margin: 0;
@@ -19,15 +19,14 @@ Universal Styling
 *================================*/
 
 #container {
-	margin: auto;
+	display: flex;
 }
 
 @font-face {
-  font-family: 'Rock Salt', cursive;
-  src: url('fonts/RockSalt-Regular.ttf') format('truetype');
-  font-family: 'Permanent Marker', cursive;
-  src: url('fonts/PermanentMarker-Regular.ttf') format('truetype');
-
+  font-family: 'The Amazing Spider-Man';
+  src: url('fonts/THE AMAZING SPIDER-MAN.ttf') format('truetype');
+	font-family: 'Spider-Man';
+  src: url('fonts/Spider-Man.ttf') format('truetype');
 }
 
 /*=====================================
@@ -35,3 +34,176 @@ Universal Styling
 Header Styling
 
 *======================================*/
+header {
+  background: rgb(124 29 29 / 50%);
+  width: 100%;
+  z-index: 99999;
+}
+
+body {
+  background-image: url('images/bg.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: repeat;
+}
+
+h1, h2, h3 {
+  font-family: 'The Amazing Spider-Man';
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	padding-top: 7%;
+}
+
+p {
+	font-family: 'Spider-Man';
+	text-align: center;
+	color: white;
+}
+
+img {
+	width: 50%;
+	padding-left: 30%;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 14%;
+  background-color: #be1f1f;
+  position: fixed;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 1.5%;
+	font-family: 'Spider-Man', cursive;
+	font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #be1f1f;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #be1f1f;
+  color: white;
+}
+
+
+.desktop-nav {
+	display: none;
+}
+
+footer {
+	padding-top: 10%;
+	padding-bottom: 7%;
+}
+
+/*------Media Queries-----------*/
+
+/*--------------------Start of 320px Media Query------------------*/
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+		background: rgb(135 121 138 / 50%);
+	}
+
+	main {
+		min-height: 615px;
+	}
+}
+/*--------------------End of 320px Media Query------------------*/
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+		display: inline-flex;
+		justify-content: center;
+		flex-direction: row;
+    width: 100%;
+		top: 0%;
+    height: auto;
+		background: rgb(135 121 138 / 50%);
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+	header {
+	  display: inline-flex;
+		justify-content: center;
+		padding-top: 9%;
+	}
+
+}
+
+
+
+/*--------------------Start of 825px Media Query------------------*/
+
+@media (min-width: 700px) {
+
+	.sidebar {
+	  display: inline-flex;
+		justify-content: center;
+		flex-direction: row;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		background: rgb(135 121 138 / 50%);
+	}
+
+	header {
+	  display: inline-flex;
+		justify-content: center;
+		padding-top: 5%;
+	}
+
+	/* Sidebar links */
+	.sidebar a {
+		font-size: 2em;
+
+	}
+
+}
+
+/*--------------------End of 825px Media Query------------------*/
+
+/*--------------------Start of 1000px Media Query------------------*/
+@media (min-width: 1000px) {
+
+#container {
+	width: 100%;
+}
+
+.sidebar {
+  display: inline-flex;
+	justify-content: center;
+	flex-direction: row;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	background: rgb(135 121 138 / 50%);
+}
+
+header {
+  display: inline-flex;
+	justify-content: center;
+	padding-top: 5%;
+}
+
+footer {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+  /* --------Desktop Body Styles----------- */
